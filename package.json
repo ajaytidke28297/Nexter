@@ -4,7 +4,8 @@
   "description": "Selling Home and real estate agency",
   "main": "index.html",
   "scripts": {
-    "sass": "node-sass sass/main.scss css/style.css -w"
+    "sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server --browser=firefox"
   },
   "author": "Ajay Tidke",
   "license": "ISC",
