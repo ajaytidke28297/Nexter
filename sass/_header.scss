@@ -1,3 +1,16 @@
 .header {
   grid-column: full-start / col-end 6;
+  background: linear-gradient(
+      rgba($color-secondary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url(/img/hero.jpeg);
+  background-position: center;
+  background-size: cover;
+
+  &__seenon-logos {
+    img {
+      height: 2.5rem;
+    }
+  }
 }
