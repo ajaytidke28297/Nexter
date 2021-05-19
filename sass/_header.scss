@@ -7,10 +7,63 @@
     url(/img/hero.jpeg);
   background-position: center;
   background-size: cover;
+  padding: 8rem;
+  padding-top: 4rem;
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  row-gap: 1.5rem;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
 
   &__seenon-logos {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+
     img {
-      height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
+      filter: brightness(70%);
     }
+  }
+
+  &__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+
+    &::after,
+    &::before {
+      content: "";
+      height: 1px;
+      background: currentColor;
+      display: block;
+    }
+  }
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+    cursor: pointer;
+  }
+
+  &__btn {
+    justify-self: start;
+    align-self: start;
   }
 }
